@@ -36,12 +36,18 @@ const switchTab = (id) => {
     document.getElementById("liked").style.display = "none";
     document.getElementById("reported").style.display = "none";
     document.getElementById("accordions").style.display = "block";
+    document.getElementById("liked-header").style.display = "none";
+    document.getElementById("reported-header").style.display = "none";
+    document.getElementById("questions").style.display = "block"
 
   } else if (id === "liked") {
     document.getElementById("liked").style.display = "block";
     document.getElementById("posts").style.display = "none";
     document.getElementById("reported").style.display = "none";
     document.getElementById("accordions").style.display = "none";
+    document.getElementById("liked-header").style.display = "block";
+    document.getElementById("reported-header").style.display = "none";
+    document.getElementById("questions").style.display = "none"
     document.getElementById("liked").innerHTML = "";
 
     displayLikedPosts();
@@ -50,6 +56,9 @@ const switchTab = (id) => {
     document.getElementById("posts").style.display = "none";
     document.getElementById("liked").style.display = "none";
     document.getElementById("accordions").style.display = "none";
+    document.getElementById("liked-header").style.display = "none";
+    document.getElementById("reported-header").style.display = "block";
+    document.getElementById("questions").style.display = "none"
     document.getElementById("reported").innerHTML = "";
 
     displayReportedPosts();
@@ -151,7 +160,6 @@ const displayLikedPosts = () => {
   likedPosts.forEach((post) => {
     const div = createPost(post);
     document.getElementById("liked").appendChild(div);
-    // document.getElementById("accordions").style.display = "none";
   });
 };
 
@@ -160,7 +168,6 @@ const displayReportedPosts = () => {
   reportedPosts.forEach((post) => {
     const div = createPost(post);
     document.getElementById("reported").appendChild(div);
-    // document.getElementById("accordions").style.display = "none";
   });
 };
 

@@ -50,16 +50,23 @@
         <div id="posts">
 
         </div>
-        <div id="liked">
-            <h1>Liked posts</h1>
+        <div>
+            <h1 id="liked-header">Liked posts</h1>
+            <div id="liked">
+
+            </div>
 
         </div>
-        <div id="reported">
-            <h1>Reported posts</h1>
+        <div>
+            <h1 id="reported-header">Reported posts</h1>
+            <div id="reported">
+
+            </div>
 
         </div>
     </main>
-    <section class="container py-5 text-center" id="accordions">
+    <h3 class="pt-5 text-center" id="questions">Frequently Asked Questions</h3>
+    <section class="container pb-5 pt-2 text-center" id="accordions">
         <div class="accordion" id="accordionExample">
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
@@ -72,12 +79,10 @@
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         JavaScript on Google Chrome runs on the V8 engine, on Mozilla FireFox it runs on SpiderMonkey
-                        and so on.
-                        The V8 engine is a high-performance JavaScript & WebAssembly engine by Google. While
-                        SpiderMonkey is a JavaScript & WebAssembly engine of Mozilla. The Chrome V8 engine & FireFox
-                        SpiderMonkey are both written in
-                        C++. Chrome V8 engine is also used by Node.js. The V8 engine & SpiderMonkey both follows the
-                        Just In Time(JIT)
+                        and so on. The V8 engine is a high-performance JavaScript engine by Google. While
+                        SpiderMonkey is a JavaScript engine builded by Brendan Eich, but now controlled by Mozilla. The
+                        Chrome V8 engine & FireFox SpiderMonkey are both written in C++. Chrome V8 engine is also used
+                        by Node.js. The V8 engine & SpiderMonkey both follows the Just In Time(JIT)
                         Compiler. But from both of them, the V8 engine is the fastest.
                     </div>
                 </div>
@@ -96,8 +101,8 @@
                         JavaScript maintains stack of frames. There are two things to notice, 1: Stack & 2: Queue. All
                         the Stack properties runs first. While Queue properties stay in the queue & if comes first in
                         the queue, runs first. While doing all these, they never block the road of code running, what
-                        comes first, runs first. This is what event loop does. For example, console.log() is
-                        synchronous & fetch is asynchronous.
+                        comes first, runs first. This is what the event loop does. For example, console.log() is
+                        synchronous while fetch is asynchronous.
                     </div>
                 </div>
             </div>
@@ -112,11 +117,13 @@
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         Session storage is temporary & is deleted after browser/website or tab is
-                        closed. While local storage is permanent & is not deleted automatically or while closing browser
+                        closed. While local storage is permanent & is not deleted automatically or while closing the
+                        browser
                         or website (until deleted manually). Local storage data persists for one month, 6 months, one
                         year or as long as user keeps the data. While session storage data is deleted immediately while
                         closing the browser/website. Session storage data is only available for specific tab, while
-                        local storage data is available throughout the browser.
+                        local storage data is available throughout the browser. For example, shopping websites mostly
+                        uses Local Storage to store shopping cart data item.
                     </div>
                 </div>
             </div>
@@ -124,7 +131,7 @@
     </section>
     <footer></footer>
 
-    <!-- Bootstrap JavaScript -->
+    <!-- Bootstrap JavaScript for accordions -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
